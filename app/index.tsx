@@ -1,15 +1,15 @@
+import { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import A from "./A/A";
 import B from "./B/B";
 import C from "./C/C";
-import { useState } from "react";
 
 export default function Index() {
   const [active, setActive] = useState(0);
   return (
     <SafeAreaView>
-      <ScrollView>
+      <View>
         <ScrollView horizontal={true}>
           <TouchableOpacity onPress={() => setActive(0)}>
             <Text
@@ -66,7 +66,7 @@ export default function Index() {
             <C />
           </View>
         )}
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 }
